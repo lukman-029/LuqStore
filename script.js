@@ -150,3 +150,15 @@ const navLinks = document.querySelector('.nav-links');
 hamburger?.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+let index = 0;
+
+function nextSlide() {
+  index++;
+  if (index >= totalSlides) index = 0;
+  slides.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
+}
+setInterval(nextSlide, 4000); 
+
