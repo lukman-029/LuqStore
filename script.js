@@ -97,6 +97,7 @@ async function addToCart(productId) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
+  alert ("items added to cart succesfully");
 }
 
 
