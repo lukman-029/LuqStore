@@ -13,7 +13,7 @@ updateCartCount();
 
 async function fetchProducts() {
   try {
-    const res = await fetch('https://dummyjson.com/products?limit=200');
+    const res = await fetch('https://dummyjson.com/products?limit=250');
     const data = await res.json();
     return data.products;
   } catch (err) {
